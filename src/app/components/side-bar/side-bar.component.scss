@@ -1,0 +1,31 @@
+.full-height {
+    height: 100%;
+}
+
+.padded {
+    padding: 1.5em 1em;
+    color: #2e2e2e;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+.with-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+mat-icon {
+    color: #2e2e2e !important;
+}
+ 
+
+.contain {
+    position: relative;
+    top: 10em;
+}
+
+.bg-light, mat-sidenav {
+    background: rgb(248, 255, 254);
+}
+

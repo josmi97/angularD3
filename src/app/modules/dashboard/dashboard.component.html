@@ -1,0 +1,51 @@
+<div class="flex-container">
+   <div class="card my-auto  h-100 text-left" *ngFor="let item of cardData;"> 
+      <div class="d-flex flex-row" *ngIf="item.progess">
+         <mat-card>
+            <mat-card-content>
+               <img src='https://i.stack.imgur.com/aNUGr.png' alt='background' class="w-70"/>
+      
+               <mat-progress-spinner class="example-margin" [color]="item.color" [mode]="item.mode" [value]="item.value" [diameter]="54">
+               </mat-progress-spinner>
+               </mat-card-content>
+            </mat-card>
+           <div [ngClass]="item.class">
+              {{item.data}}
+           </div>
+           <div class="py-2">
+              {{item.title}}
+           </div>
+      </div>
+      <div class="d-flex flex-row card-totalTask" *ngIf="!item.progess">
+         <div class="px-2">
+            {{item.data}}
+         </div>
+         <div class="px-2">
+            {{item.title}}
+         </div>
+      </div>
+   </div>
+
+</div>
+
+
+<!-- Charts -->
+
+
+<div class="row mx-0 py-5">
+   <div class="col-4">
+      <p class="title">Tasks Distribution</p>
+      <app-piechart></app-piechart>
+   </div>
+   <div class="col-4">
+      <p class="title">Tasks by Beinex Sectors</p>
+       <app-barchart [data]="Data"></app-barchart>       
+   </div>
+   <div class="col-4">
+      <p class="title">Tasks by Auraa</p>
+      <app-barchart [data]="Data2"></app-barchart> 
+   </div>
+</div>
+ 
+
+ 
